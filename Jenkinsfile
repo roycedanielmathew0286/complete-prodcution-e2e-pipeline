@@ -26,12 +26,12 @@ pipeline{
     
         stage("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/dmancloud/complete-prodcution-e2e-pipeline'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/roycedanielmathew0286/complete-prodcution-e2e-pipeline.git'
             }
 
         }
 
-/*        stage("Build Application"){
+        stage("Build Application"){
             steps {
                 sh "mvn clean package"
             }
@@ -45,7 +45,7 @@ pipeline{
 
         }
         
-        stage("Sonarqube Analysis") {
+  /*      stage("Sonarqube Analysis") {
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
