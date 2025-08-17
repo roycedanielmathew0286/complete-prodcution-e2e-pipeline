@@ -56,7 +56,7 @@ pipeline{
 
         }
 
-       stage("Quality Gate") {
+ /*       stage("Quality Gate") {
             steps {
                 script {
                     waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
@@ -65,7 +65,7 @@ pipeline{
 
         }
 
-  /*       stage("Build & Push Docker Image") {
+        stage("Build & Push Docker Image") {
             steps {
                 script {
                     docker.withRegistry('',DOCKER_PASS) {
